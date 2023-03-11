@@ -1,0 +1,44 @@
+@use './styles'
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    font-family: 'Sofia Pro'
+    color: styles.$clr-dark
+    font-size: 1.125rem
+    overflow-x: hidden
+    &::before
+        top: 0
+        left: 0
+        content: ""
+        position: absolute
+        width: 100vw
+        height: 100vh
+        opacity: 0.12
+        background: linear-gradient(180deg, #F54748 0%, #F5474800 100%)
+        z-index: -1
+span:has(svg)
+    display: flex
+    place-items: center
+    svg
+        object-fit: contain
+        width: inherit
+.button
+    display: inline-flex
+    padding: 0.875rem 1.5rem
+    border-radius: 10rem
+    background: styles.$clr-primary1
+    align-items: center
+    color: styles.$clr-neutral
+h1
+    font-size: 3.625rem
+    font-weight: 900
+    line-height: 4.875rem
+h1, h2, h3, h4, h5, h6
+    & > span
+        &:nth-child(odd)
+            color: styles.$clr-primary1
+        &:nth-child(even)
+            color: styles.$clr-primary2
+            
